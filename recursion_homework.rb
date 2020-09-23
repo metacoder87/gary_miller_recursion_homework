@@ -30,12 +30,15 @@
 # Write a function add_numbers(nums_array) that takes in an array of Integers 
 # and returns the sum of those numbers. Write this method recursively.
 
+  def add_numbers(num_array)
+    num_array.count > 1 ? num_array.first + add_numbers(num_array.drop(1)) : num_array.first
+  end
 
 #   # Test Cases
-#   add_numbers([1,2,3,4]) # => returns 10
-#   add_numbers([3]) # => returns 3
-#   add_numbers([-80,34,7]) # => returns -39
-#   add_numbers([]) # => returns nil
+  puts add_numbers([1,2,3,4]) # => returns 10
+  puts add_numbers([3]) # => returns 3
+  puts add_numbers([-80,34,7]) # => returns -39
+  puts add_numbers([]) # => returns nil
 
 
 # Exercise 3 - Gamma Function
