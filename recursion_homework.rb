@@ -45,12 +45,15 @@
 # Let's write a method that will solve Gamma Function recursively. 
 # The Gamma Function is defined Γ(n) = (n-1)!.
 
+  def gamma_fnc(n)
+    n > 1 ? n * gamma_fnc(n - 1) : n < 1 ? [].first : 1
+  end
 
 #   # Test Cases
-#   gamma_fnc(0)  # => returns nil
-#   gamma_fnc(1)  # => returns 1
-#   gamma_fnc(4)  # => returns 6
-#   gamma_fnc(8)  # => returns 5040
+  puts gamma_fnc(0)  # => returns nil
+  puts gamma_fnc(1)  # => returns 1
+  puts gamma_fnc(4)  # => returns 6
+  puts gamma_fnc(8)  # => returns 5040
 
 
 # Exercise 4 - Ice Cream Shop
