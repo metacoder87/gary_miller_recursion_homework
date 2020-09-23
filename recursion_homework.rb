@@ -46,7 +46,11 @@
 # The Gamma Function is defined Γ(n) = (n-1)!.
 
   def gamma_fnc(n)
-    n > 1 ? n * gamma_fnc(n - 1) : n < 1 ? [].first : 1
+    n > 1 ? factorial(n - 1) : n < 1 ? [].first : 1
+  end
+
+  def factorial(n)
+    n > 1 ? n * factorial(n - 1) : 1
   end
 
 #   # Test Cases
