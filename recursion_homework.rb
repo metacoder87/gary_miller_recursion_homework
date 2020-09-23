@@ -15,11 +15,15 @@
 # Write a function sum_to(n) that uses recursion to calculate the sum from 
 # 1 to n (inclusive of n).
 
+  def sum_to(n)
+    n > 1 ? n + sum_to(n - 1) : n < 1 ? [].first : 1
+  end
+
 #   # Test Cases
-  # sum_to(5)  # => returns 15
-  # sum_to(1)  # => returns 1
-  # sum_to(9)  # => returns 45
-  # sum_to(-8)  # => returns nil
+  puts sum_to(5)  # => returns 15
+  puts sum_to(1)  # => returns 1
+  puts sum_to(9)  # => returns 45
+  puts sum_to(-8)  # => returns nil
 
 
 # Exercise 2 - add_numbers
