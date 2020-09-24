@@ -77,10 +77,14 @@
 # Exercise 5 - Reverse
 # Write a function reverse(string) that takes in a string and returns it reversed.
 
+  def reverse(string)
+    string.length > 1 ? string[-1] + reverse(string[0...-1]) : string
+  end
+
 #   # Test Cases
-#   reverse("house") # => "esuoh"
-#   reverse("dog") # => "god"
-#   reverse("atom") # => "mota"
-#   reverse("q") # => "q"
-#   reverse("id") # => "di"
-#   reverse("") # => ""
+  puts reverse("house") # => "esuoh"
+  puts reverse("dog") # => "god"
+  puts reverse("atom") # => "mota"
+  puts reverse("q") # => "q"
+  puts reverse("id") # => "di"
+  puts reverse("") # => ""
