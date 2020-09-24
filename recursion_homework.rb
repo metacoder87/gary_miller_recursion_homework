@@ -46,11 +46,7 @@
 # The Gamma Function is defined Γ(n) = (n-1)!.
 
   def gamma_fnc(n)
-    n > 1 ? factorial(n - 1) : n < 1 ? [].first : 1
-  end
-
-  def factorial(n)
-    n > 1 ? n * factorial(n - 1) : 1
+    n > 1 ? (n - 1) * gamma_fnc(n - 1) : n < 1 ? [].first : 1
   end
 
 #   # Test Cases
@@ -66,12 +62,16 @@
 # favorite ice cream flavor. Recursively find out whether or not the shop offers 
 # their favorite flavor.
 
+  # def ice_cream_shop(flavors, favorite)
+  #   flavors.first == favorite  ice_cream_shop(flavors.drop(1), favorite)
+  # end
+
 #   # Test Cases
-#   ice_cream_shop(['vanilla', 'strawberry'], 'blue moon')  # => returns false
-#   ice_cream_shop(['pistachio', 'green tea', 'chocolate', 'mint chip'], 'green tea')  # => returns true
-#   ice_cream_shop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea salt caramel'], 'pistachio')  # => returns false
-#   ice_cream_shop(['moose tracks'], 'moose tracks')  # => returns true
-#   ice_cream_shop([], 'honey lavender')  # => returns false
+  # puts ice_cream_shop(['vanilla', 'strawberry'], 'blue moon')  # => returns false
+  # puts ice_cream_shop(['pistachio', 'green tea', 'chocolate', 'mint chip'], 'green tea')  # => returns true
+  # puts ice_cream_shop(['cookies n cream', 'blue moon', 'superman', 'honey lavender', 'sea salt caramel'], 'pistachio')  # => returns false
+  # puts ice_cream_shop(['moose tracks'], 'moose tracks')  # => returns true
+  # puts ice_cream_shop([], 'honey lavender')  # => returns false
 
 
 # Exercise 5 - Reverse
