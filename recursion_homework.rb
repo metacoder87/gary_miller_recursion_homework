@@ -88,3 +88,8 @@
   puts reverse("q") # => "q"
   puts reverse("id") # => "di"
   puts reverse("") # => ""
+
+
+            # meta_coder (Gary Miller) =)
+            # gmiller052611@gmail.com
+            # https://github.com/metacoder87/gary_miller_recursion_homework
